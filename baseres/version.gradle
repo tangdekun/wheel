@@ -1,0 +1,4 @@
+ext {
+    baseres_versionCode = 1
+    baseres_versionName = "1.0.180717.01"
+}

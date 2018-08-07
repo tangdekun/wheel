@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="baseres_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/baseres_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/baseres_colorPrimaryDark</item>
+        <item name="colorAccent">@color/baseres_colorAccent</item>
+    </style>
+
+</resources>

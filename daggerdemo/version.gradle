@@ -1,0 +1,4 @@
+ext {
+    daggerdemo_versionCode = 1
+    daggerdemo_versionName = "1.0.180728.01"
+}

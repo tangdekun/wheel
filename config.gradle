@@ -1,0 +1,47 @@
+/*全局配置信息及第三方依赖统一管理*/
+ext {
+
+    constraint_layout_version = '1.1.1'
+    test_runner_version = '1.0.1'
+    test_espresso_core_version = '3.0.1'
+    test_junit_version = '4.12'
+
+
+    android = [
+            compileSdkVersion       : 27,
+            buildToolsVersion       : '27.0.3',
+            minSdkVersion           : 15,
+            targetSdkVersion        : 27,
+            androidSupportSdkVersion: '27.1.1'
+    ]
+
+    dependencies = [
+            "appcompat_v7"     : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+            "constraint_layout": 'com.android.support.constraint:constraint-layout:1.1.2',
+            // 测试架包
+            "runner"           : "com.android.support.test:runner:${test_runner_version}",
+            "espresso_core"    : "com.android.support.test.espresso:espresso-core:${test_espresso_core_version}",
+            "junit"            : "junit:junit:${test_junit_version}",
+            "kotlin"           : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            "appcompat"        : 'androidx.appcompat:appcompat:1.0.0-alpha1',
+            //工具类架包
+            "utilcode"         : 'com.blankj:utilcode:1.15.0',
+            //Rxjava2异步
+            "rxjava"           : 'io.reactivex.rxjava2:rxjava:2.1.9',
+            "rxandroid"        : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+            //Dragger2注解
+            "dagger"           : 'com.google.dagger:dagger:2.11',
+            "dagger-compiler"  : 'com.google.dagger:dagger-compiler:2.11',
+            "gson"             : 'com.google.code.gson:gson:2.8.2',
+            //Retrofit网络请求框架
+            "okhttp"           : 'com.squareup.okhttp3:okhttp:3.10.0',
+            "retrofit"         : 'com.squareup.retrofit2:retrofit:2.3.0',
+            "converter-gson"   : 'com.squareup.retrofit2:converter-gson:2.3.0',
+            "adapter-rxjava2"  : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+            //Jetpack
+            "core-ktx"         : 'androidx.core:core-ktx:1.0.0-alpha1'
+
+
+    ]
+
+}

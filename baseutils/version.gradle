@@ -1,0 +1,4 @@
+ext {
+    baseutils_versionCode = 1
+    baseutils_versionName = "1.0.180717.01"
+}
