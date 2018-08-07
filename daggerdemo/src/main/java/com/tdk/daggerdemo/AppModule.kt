@@ -12,19 +12,19 @@ import javax.inject.Singleton
  * @Email tangdekun0924@gmail.com
  */
 @Module
-class AppModule(private val application: MyApplication) {
+class AppModule {
 
 
     @Singleton
     @Provides
-    fun provideAppContext(): Context {
+    fun provideAppContext(application: MyApplication): Context {
         return application
     }
 
     @Singleton
     @Provides
-    fun provideSharedPreference(): SharedPreferences {
-        return application.getSharedPreferences(Constant.SHAREDPREFERENCES_FILE_NAME, Context.MODE_PRIVATE)
+    fun provideSharedPreference(mContext: Context): SharedPreferences {
+        return mContext.getSharedPreferences(Constant.SHAREDPREFERENCES_FILE_NAME, Context.MODE_PRIVATE)
     }
 
 
