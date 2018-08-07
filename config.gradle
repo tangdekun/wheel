@@ -5,10 +5,12 @@ ext {
     test_runner_version = '1.0.1'
     test_espresso_core_version = '3.0.1'
     test_junit_version = '4.12'
+//    room_version = "2.0.0-beta01"
+    room_version = "1.1.1"
 
 
     android = [
-            compileSdkVersion       : 27,
+            compileSdkVersion       : 28,
             buildToolsVersion       : '27.0.3',
             minSdkVersion           : 15,
             targetSdkVersion        : 27,
@@ -16,30 +18,47 @@ ext {
     ]
 
     dependencies = [
-            "appcompat_v7"     : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
-            "constraint_layout": 'com.android.support.constraint:constraint-layout:1.1.2',
+            //            "appcompat_v7"            : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+            //            "constraint_layout"       : 'com.android.support.constraint:constraint-layout:1.1.1',
+            "appcompat_v7"            : 'androidx.appcompat:appcompat:1.0.0-alpha1',
+            "constraint_layout"       : 'androidx.constraintlayout:constraintlayout:1.1.2',
             // 测试架包
-            "runner"           : "com.android.support.test:runner:${test_runner_version}",
-            "espresso_core"    : "com.android.support.test.espresso:espresso-core:${test_espresso_core_version}",
-            "junit"            : "junit:junit:${test_junit_version}",
-            "kotlin"           : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-            "appcompat"        : 'androidx.appcompat:appcompat:1.0.0-alpha1',
+            //            "runner"                  : "com.android.support.test:runner:${test_runner_version}",
+            //            "espresso_core"           : "com.android.support.test.espresso:espresso-core:${test_espresso_core_version}",
+            "runner"                  : 'androidx.test:runner:1.1.0-alpha3',
+            "espresso_core"           : 'androidx.test.espresso:espresso-core:3.1.0-alpha3',
+            "junit"                   : 'junit:junit:4.12',
+            "kotlin"                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            "appcompat"               : 'androidx.appcompat:appcompat:1.0.0-alpha1',
             //工具类架包
-            "utilcode"         : 'com.blankj:utilcode:1.15.0',
+            "utilcode"                : 'com.blankj:utilcode:1.15.0',
             //Rxjava2异步
-            "rxjava"           : 'io.reactivex.rxjava2:rxjava:2.1.9',
-            "rxandroid"        : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+            "rxjava"                  : 'io.reactivex.rxjava2:rxjava:2.1.9',
+            "rxandroid"               : 'io.reactivex.rxjava2:rxandroid:2.0.2',
             //Dragger2注解
-            "dagger"           : 'com.google.dagger:dagger:2.11',
-            "dagger-compiler"  : 'com.google.dagger:dagger-compiler:2.11',
-            "gson"             : 'com.google.code.gson:gson:2.8.2',
+            "dagger-compiler"         : 'com.google.dagger:dagger-compiler:2.11',
+            "dagger-android"          : 'com.google.dagger:dagger-android:2.11',
+            "dagger-android-support"  : 'com.google.dagger:dagger-android-support:2.11',
+            "dagger-android-processor": 'com.google.dagger:dagger-android-processor:2.11',
+            "dagger"                  : "com.google.dagger:dagger:2.0.1",
+            "gson"                    : 'com.google.code.gson:gson:2.8.2',
             //Retrofit网络请求框架
-            "okhttp"           : 'com.squareup.okhttp3:okhttp:3.10.0',
-            "retrofit"         : 'com.squareup.retrofit2:retrofit:2.3.0',
-            "converter-gson"   : 'com.squareup.retrofit2:converter-gson:2.3.0',
-            "adapter-rxjava2"  : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+            "okhttp"                  : 'com.squareup.okhttp3:okhttp:3.10.0',
+            "retrofit"                : 'com.squareup.retrofit2:retrofit:2.3.0',
+            "converter-gson"          : 'com.squareup.retrofit2:converter-gson:2.3.0',
+            "adapter-rxjava2"         : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
             //Jetpack
-            "core-ktx"         : 'androidx.core:core-ktx:1.0.0-alpha1'
+            "core-ktx"                : 'androidx.core:core-ktx:1.0.0-alpha1',
+            "lifecycle"               : 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1',
+            //room
+//            "room-runtime"               : 'androidx.room:room-runtime:$room_version',
+//            "room-compiler"               : 'androidx.room:room-compiler:$room_version',//use kapt for Kotlin
+//            "room-rxjava2"               : 'androidx.room:room-rxjava2:$room_version',
+//            "room-testing"               : 'androidx.room:room-testing:$room_version',
+            "room-runtime"            : 'android.arch.persistence.room:runtime:$room_version',
+            "room-compiler"           : 'android.arch.persistence.room:compiler:$room_version',//use kapt for Kotlin
+            "room-rxjava2"            : 'android.arch.persistence.room:rxjava2:$room_version',
+            "room-testing"            : 'android.arch.persistence.room:testing:$room_version',
 
 
     ]

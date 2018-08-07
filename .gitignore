@@ -70,3 +70,7 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+app/libs/
+baseres/libs/
+baseutils/libs/
+daggerdemo/libs/
